@@ -1,65 +1,123 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ayame - Find Love</title>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ayame - Find Love">
-  <meta property="og:description" content="Ayameの新曲『Find Love』を聴く">
-  <meta property="og:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg">
-  <meta property="og:url" content="https://ayame-music.github.io/find-love/">
-  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="Ayame - Find Love" />
+  <meta property="og:description" content="Ayameの新曲『Find Love』を聴く" />
+  <meta property="og:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg" />
+  <meta property="og:url" content="https://ayame-music.github.io/find-love/" />
+  <meta property="og:type" content="music.song" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ayame - Find Love">
-  <meta name="twitter:description" content="Ayameの新曲『Find Love』を聴く">
-  <meta name="twitter:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayame - Find Love" />
+  <meta name="twitter:description" content="Ayameの新曲『Find Love』を聴く" />
+  <meta name="twitter:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg" />
 
   <style>
+    :root {
+      --bg: #111;
+      --fg: #fff;
+      --muted: #b8b8b8;
+      --card: #1b1b1b;
+      --btn: linear-gradient(135deg, #444, #222);
+      --btn-hover: linear-gradient(135deg, #666, #333);
+      --radius: 12px;
+      --shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
-      padding: 50px;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 520px;
+      padding: 24px 18px 40px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .cover {
+      width: 100%;
+      border-radius: var(--radius);
+      display: block;
+      box-shadow: var(--shadow);
     }
     h1 {
-      color: #333;
+      font-size: 1.8rem;
+      margin: 14px 0 4px;
     }
-    .player {
-      margin: 30px auto;
-      max-width: 400px;
+    h2 {
+      font-weight: 500;
+      font-size: 1rem;
+      margin: 0 0 16px;
+      color: var(--muted);
     }
-    a {
-      display: inline-block;
-      margin: 10px;
-      color: #1a73e8;
-      text-decoration: none;
-      font-weight: bold;
+    .player { margin: 18px 0; }
+    iframe { border: none; border-radius: var(--radius); width: 100%; }
+
+    .links { display: grid; gap: 12px; margin-top: 16px; }
+    .link-btn {
+      display: block; text-decoration: none; color: #fff; font-weight: 700; text-align: center;
+      padding: 14px; border-radius: 10px; background: var(--btn); transition: transform .2s ease, filter .2s ease;
     }
+    .link-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+    footer { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 18px; }
+    .note { color: var(--muted); font-size: .9rem; text-align: center; margin-top: 10px; }
   </style>
 </head>
 <body>
-  <h1>Ayame - Find Love</h1>
+  <main class="container">
+    <div class="card">
+      <img src="assets/cover.jpg" alt="Find Love ジャケット" class="cover" />
+      <h1>Find Love</h1>
+      <h2>Ayame</h2>
 
-  <div class="player">
-    <!-- Spotify 埋め込みプレーヤー -->
-    <iframe src="https://open.spotify.com/embed/track/YOUR_SPOTIFY_TRACK_ID" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  </div>
+      <!-- Spotify: album embed (ID: 5Mi68353NSrJCCr1AxT9VX) -->
+      <div class="player">
+        <iframe
+          src="https://open.spotify.com/embed/album/5Mi68353NSrJCCr1AxT9VX"
+          height="352"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify player: Find Love (Album)"></iframe>
+      </div>
 
-  <div>
-    <!-- Apple Music リンク -->
-    <a href="https://music.apple.com/jp/album/find-love/YOUR_APPLE_MUSIC_ID" target="_blank">Apple Musicで聴く</a>
+      <!-- Apple Music: album embed -->
+      <div class="player">
+        <iframe
+          src="https://embed.music.apple.com/jp/album/find-love-single/1833278442"
+          height="450"
+          loading="lazy"
+          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+          title="Apple Music player: Find Love (Single)"></iframe>
+      </div>
 
-    <!-- Spotify リンク -->
-    <a href="https://open.spotify.com/track/YOUR_SPOTIFY_TRACK_ID" target="_blank">Spotifyで聴く</a>
-  </div>
+      <div class="links">
+        <a class="link-btn" href="https://music.apple.com/jp/album/find-love-single/1833278442" target="_blank" rel="noopener">Apple Musicで聴く</a>
+        <a class="link-btn" href="https://open.spotify.com/album/5Mi68353NSrJCCr1AxT9VX" target="_blank" rel="noopener">Spotifyで聴く</a>
+      </div>
 
-  <footer>
-    <p>&copy; 2025 Ayame-Music</p>
-    <p>GitHub Pages: <a href="https://ayame-music.github.io/find-love/" target="_blank">https://ayame-music.github.io/find-love/</a></p>
-  </footer>
+      <p class="note">※ プレーヤーが表示されない場合はブラウザのトラッキング防止や拡張機能の影響をご確認ください。</p>
+    </div>
+
+    <footer>© 2025 Ayame-Music</footer>
+  </main>
 </body>
 </html>
