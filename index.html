@@ -3,102 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Love - Ayame</title>
+  <title>Ayame - Find Love</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayame - Find Love">
+  <meta property="og:description" content="Ayameの新曲『Find Love』を聴く">
+  <meta property="og:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg">
+  <meta property="og:url" content="https://ayame-music.github.io/find-love/">
+  <meta property="og:type" content="music.song">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayame - Find Love">
+  <meta name="twitter:description" content="Ayameの新曲『Find Love』を聴く">
+  <meta name="twitter:image" content="https://ayame-music.github.io/find-love/assets/cover.jpg">
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fafafa;
-      margin: 0;
-      padding: 0;
       text-align: center;
-      color: #333;
-    }
-    header {
-      padding: 20px;
-    }
-    .cover {
-      max-width: 300px;
-      width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background-color: #f9f9f9;
+      padding: 50px;
     }
     h1 {
-      font-size: 2rem;
-      margin: 15px 0 5px;
-    }
-    h2 {
-      font-size: 1.2rem;
-      margin: 0 0 20px;
-      color: #666;
-    }
-    .links {
-      margin: 20px auto;
-      max-width: 400px;
-      display: grid;
-      gap: 12px;
-    }
-    .links a {
-      display: block;
-      padding: 12px;
-      background: #fff;
-      border-radius: 8px;
-      text-decoration: none;
       color: #333;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
     }
-    .links a:hover {
-      transform: scale(1.03);
-    }
-    iframe {
-      margin: 20px auto;
-      border-radius: 12px;
+    .player {
+      margin: 30px auto;
       max-width: 400px;
-      width: 100%;
     }
-    footer {
-      margin: 40px 0;
-      font-size: 0.8rem;
-      color: #999;
+    a {
+      display: inline-block;
+      margin: 10px;
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <h1>Ayame - Find Love</h1>
 
-  <header>
-    <img src="Find Love.jpg" alt="Find Love ジャケット" class="cover">
-    <h1>Find Love</h1>
-    <h2>Ayame</h2>
-  </header>
+  <div class="player">
+    <!-- Spotify 埋め込みプレーヤー -->
+    <iframe src="https://open.spotify.com/embed/track/YOUR_SPOTIFY_TRACK_ID" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
 
-  <!-- Spotify Embed -->
-  <iframe style="border-radius:12px" 
-          src="https://open.spotify.com/embed/album/5Mi68353NSrJCCr1AxT9VX?utm_source=generator" 
-          width="100%" height="352" frameBorder="0" 
-          allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-  </iframe>
+  <div>
+    <!-- Apple Music リンク -->
+    <a href="https://music.apple.com/jp/album/find-love/YOUR_APPLE_MUSIC_ID" target="_blank">Apple Musicで聴く</a>
 
-  <!-- Apple Music Embed -->
-  <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
-          frameborder="0" height="450" style="width:100%;max-width:400px;overflow:hidden;background:transparent;" 
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" 
-          src="https://embed.music.apple.com/jp/album/find-love-single/1833278442">
-  </iframe>
-
-  <div class="links">
-    <a href="https://music.apple.com/jp/album/find-love-single/1833278442" target="_blank">Apple Music</a>
-    <a href="https://open.spotify.com/album/5Mi68353NSrJCCr1AxT9VX?si=m0AP27EGRGuYOT9aFmFVJQ" target="_blank">Spotify</a>
-    <a href="https://music.apple.com/jp/album/find-love-single/1833278442" target="_blank">iTunes Store</a>
-    <a href="https://music.youtube.com/playlist?list=OLAK5uy_ldNhX-YQ_BjZZqwur215hZn2YrMC-4UQA&si=oniKn_KBTYT8fY8m" target="_blank">YouTube Music</a>
-    <a href="https://s.awa.fm/album/32771640816d88d26748" target="_blank">AWA</a>
-    <a href="https://music.amazon.com/tracks/B0FMGVZTX7?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_JIylDMSVouG7QwcLjPUWWXEQ9" target="_blank">Amazon Music</a>
+    <!-- Spotify リンク -->
+    <a href="https://open.spotify.com/track/YOUR_SPOTIFY_TRACK_ID" target="_blank">Spotifyで聴く</a>
   </div>
 
   <footer>
-    © 2025 Ayame
+    <p>&copy; 2025 Ayame-Music</p>
+    <p>GitHub Pages: <a href="https://ayame-music.github.io/find-love/" target="_blank">https://ayame-music.github.io/find-love/</a></p>
   </footer>
-
 </body>
 </html>
